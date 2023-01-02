@@ -1,15 +1,11 @@
+import { Container } from 'react-bootstrap'
 import { Outlet } from 'react-router-dom'
-import { Link } from 'react-router-dom'
-
 
 const Layout = () => {
   return (
-    <>
-    <nav>
-        <Link to="/dash/areas">Areas</Link>
-    </nav>
-    <Outlet />
-    </>
+    <Container>
+        <Outlet />
+    </Container>
   )
 }
 export default Layout

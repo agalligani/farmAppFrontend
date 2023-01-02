@@ -30,7 +30,7 @@ export const {
 //returns the query result object
 export const selectAreasResult = areasApiSlice.endpoints.getAreas.select()
 
-//creates momoized selector
+//creates memoized selector
 const selectAreasData = createSelector(
     selectAreasResult,
     areasResult => areasResult.data // normalized state object
@@ -40,7 +40,7 @@ const selectAreasData = createSelector(
 export const {
     selectAll: selectAllAreas,
     selectById: selectAreaById,
-    selectIds: selectNoteIds
+    selectIds: selectAreaIds
     // Pass in a selector that returns the areas slice of state
 } = areasAdapter.getSelectors(state => selectAreasData(state) ?? initialState)
 
